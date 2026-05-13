@@ -66,7 +66,17 @@ h1 {
   letter-spacing: 2px;
 }
 
+form {
+  display: flex;
+  gap: 10px;
+}
+
 #taskList {
   list-style: none; /* poistaa pallot */
   padding-left: 0;  /* poistaa sisennyksen */
+}
+
+#taskInput {
+  flex: 1;
+  padding: 8px;
 }
