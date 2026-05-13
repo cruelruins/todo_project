@@ -72,15 +72,23 @@ form {
 }
 
 form button {
-  white-space: nowrap; /* estää rivinvaihdon */
+  white-space: nowrap;
 }
 
 #taskList {
-  list-style: none; /* poistaa pallot */
-  padding-left: 0;  /* poistaa sisennyksen */
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
 }
 
 #taskInput {
   flex: 1;
   padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+#taskInput:focus {
+  outline: 2px solid #bc5090;
 }
