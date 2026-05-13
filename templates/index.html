@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+<div class="container">
     <h1>Tehtävälista</h1>
 
     <form id="todoForm">
@@ -37,7 +37,27 @@
 
                 // Luodaan uusi listaelementti
                 const li = document.createElement("li");
-                li.textContent = taskText;
+
+                // Luodaan checkbox
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+
+                // Luodaan tehtävän teksti
+                const textSpan = document.createElement("span");
+                textSpan.textContent = taskText;
+
+                // Kun checkboxia klikataan
+                checkbox.addEventListener("change", function() {
+
+                    if (checkbox.checked) {
+                        textSpan.style.textDecoration = "line-through";
+                        textSpan.style.opacity = "0.6";
+                    } else {
+                        textSpan.style.textDecoration = "none";
+                        textSpan.style.opacity = "1";
+                    }
+
+                });
 
                 // Luodaan poista-painike
                 const deleteButton = document.createElement("button");
@@ -48,7 +68,9 @@
                     li.remove();
                 });
 
-                // Lisätään painike listaelementin sisään
+                // Lisätään elementit listaelementtiin
+                li.appendChild(checkbox);
+                li.appendChild(textSpan);
                 li.appendChild(deleteButton);
 
                 // Lisätään listaelementti sivulle
@@ -59,6 +81,6 @@
             }
         });
     </script>
-
+</div>
 </body>
 </html>
