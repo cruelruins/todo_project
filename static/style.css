@@ -35,6 +35,9 @@ button {
 
 li { 
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: white;
 }
 
@@ -48,3 +51,7 @@ h1 {
   letter-spacing: 2px;
 }
 
+#taskList {
+  list-style: none; /* poistaa pallot */
+  padding-left: 0;  /* poistaa sisennyksen */
+}
