@@ -63,10 +63,23 @@
                 const deleteButton = document.createElement("button");
                 deleteButton.textContent = "Poista";
 
-                // Kun painiketta klikataan
-                deleteButton.addEventListener("click", function() {
-                    li.remove();
-                });
+// Kun painiketta klikataan
+deleteButton.addEventListener("click", function() {
+    fetch("/delete_task", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            task: taskText
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        li.remove();
+    });
+});
 
                 // Lisätään elementit listaelementtiin
                 li.appendChild(checkbox);
