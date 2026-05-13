@@ -71,6 +71,10 @@ form {
   gap: 10px;
 }
 
+form button {
+  white-space: nowrap; /* estää rivinvaihdon */
+}
+
 #taskList {
   list-style: none; /* poistaa pallot */
   padding-left: 0;  /* poistaa sisennyksen */
