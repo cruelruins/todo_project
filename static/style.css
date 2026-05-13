@@ -1,1 +1,35 @@
+body { margin: 40px;
+background-image: url("taustakuva.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 20px;
+font-family: Arial;
+}
+
+input { padding: 6px;
+}
+
+button { padding: 6px 10px;
+margin-left: 5px;
+color: white;
+background-color: #bc5090;
+border: none;
+}
+
+li { margin-top: 10px;
+color: white;
+}
+
+
+h1 {
+text-align: left; 
+font-family: Arial;
+font-size: 55px;
+font-weight: 700;
+color: white;
+text-transform: uppercase;
+letter-spacing: 2px;
+padding-top: 30px; 
+}
 
